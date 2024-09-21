@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from 'vue'
 import MyComponent from './components/MyComponent.vue'
+import MarkdownPreview from './components/MarkdownPreview.vue'
+const markdown = ref('# Hello, Vite!')
+const showPreview = ref(false)
 </script>
 
 <template>
@@ -11,12 +15,26 @@ import MyComponent from './components/MyComponent.vue'
 			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
 		</a>
 	</div>
+	<p>Section 1</p>
 	<MyComponent />
 	<p>
 		<span>Value of Checkbox: </span> <br />
 		<span>Value of Radio options: </span> <br />
 		<span>Value of Text input: </span> <br />
 	</p>
+	<p>Section 2</p>
+	<br />
+	<textarea v-model="markdown"></textarea>
+	<br />
+	<label>
+		<input type="checkbox" v-model="showPreview" />
+		Show preview
+	</label>
+	<hr />
+	<div v-if="showPreview">
+		<h2>Preview</h2>
+		<MarkdownPreview :markdown="markdown" />
+	</div>
 </template>
 
 <style scoped>
