@@ -1,5 +1,11 @@
-# Vue 3 + Vite
+# KnowBe4 Front End Interview
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Instructions
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+1. Clone this repository
+2. Checkout any of the React, Vue or Svelte branches based on your preference
+3. Complete the following tasks
+   1. There's a MyComponent component in the components folder.
+   2. It's a simple component that displays a checkbox, radio buttons and a text input.
+   3. The parent app component has three lines that show the state of each of these inputs.
+   4. The task is to make the parent app component stateful and pass the state to the MyComponent component as props. The MyComponent component should then update the parent app component state when the inputs change.
